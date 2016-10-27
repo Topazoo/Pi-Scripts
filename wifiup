@@ -1,0 +1,13 @@
+#!/bin/bash
+# On boot turn on wifi adapter
+# Send ip address to iphone (ipv4 and ipv6)
+sleep 10 # Arbitrary delay (needed a wait to work)
+ip link set wlan0 up # Turn on adapter
+wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant.conf # Use default wpa settings
+sleep 10 # Wait to make sure networking registers changes
+dhclient -r wlan0 # Release 
+dhclient wlan0 # Renew
+/sbin/ifconfig wlan0 | grep inet | head -n 1 | awk '{ print $2 }' >> ip_addr # Get  ipv4
+/sbin/ifconfig wlan0 | grep inet6 | head -n 1 | awk '{ print $2 }' >> ip_addr # Get  ipv6
+python /home/topazoo/store/python/wireless/textme.py # Text ipv4 (textme.py)
+rm /home/topazoo/store/temp/ip_addr # delete temporary file
