@@ -22,3 +22,5 @@ Scripts for a RaspberryPi B+ running Kali Linux
 	Sends a message to an email address using your gmail account. I call it "textme" because I
 	used it to send my phone the ip address of the device so I could SSH from my phone or laptop and
 	eliminate the need for an external monitor. 
+	
+	This is enabled in wifiup by default.
