@@ -16,3 +16,9 @@ Scripts for a RaspberryPi B+ running Kali Linux
 	in the file (/etc/network/interfaces) add to the bottom:
 
 		post-up /path/to/script/wifiup
+		
+- textme.py
+
+	Sends a message to an email address using your gmail account. I call it "textme" because I
+	used it to send my phone the ip address of the device so I could SSH from my phone or laptop and
+	eliminate the need for an external monitor. 
