@@ -17,6 +17,12 @@ Scripts for a RaspberryPi B+ running Kali Linux
 
 		post-up /path/to/script/wifiup
 		
+- sendinfo
+
+	A better version of wifiup that can also run on a Edimax EW-7811Un wireless
+	adapter. It does not require any manual formatting and can be run as a cron
+	job on reboot. 
+		
 - textme.py
 
 	Sends a message to an email address using your gmail account. I call it "textme" because I
