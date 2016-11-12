@@ -9,5 +9,5 @@ dhclient -r wlan0 # Release
 dhclient wlan0 # Renew
 /sbin/ifconfig wlan0 | grep inet | head -n 1 | awk '{ print $2 }' >> ip_addr # Get  ipv4
 /sbin/ifconfig wlan0 | grep inet6 | head -n 1 | awk '{ print $2 }' >> ip_addr # Get  ipv6
-python /home/topazoo/store/python/wireless/textme.py # Text ipv4 (textme.py)
-rm /home/topazoo/store/temp/ip_addr # delete temporary file
+python /home/YOURUSERNAME/store/python/wireless/textmev1.py # Text ipv4 (textme.py)
+rm /home/YOURUSERNAME/store/temp/ip_addr # delete temporary file

@@ -10,6 +10,5 @@ dhclient wlan0 # Renew DHCP
 
 ipv4="$(/sbin/ifconfig wlan0 | grep inet | head -n 1 | awk '{ print $2 }')" # >> /home/topazoo/store/temp/ip_addr
 ipv6="$(/sbin/ifconfig wlan0 | grep inet6 | head -n 1 | awk '{ print $2 }')" # >> /home/topazoo/store/temp/ip_addr
-python /home/topazoo/store/python/wireless/textme.py $ipv4 $ipv6 # Text stored numbers
-#sleep 10
-#rm /home/topazoo/store/temp/ip_addr
+python /home/YOURUSERNAME/store/python/wireless/textme.py $ipv4 $ipv6 # Text stored numbers
+
